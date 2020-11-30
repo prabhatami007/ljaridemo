@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.distress.DistressExperimentSetupFragment"
+    android:fitsSystemWindows="true"
+    tools:ignore="MissingDefaultResource">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/layoutForTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dim_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                android:paddingTop="@dimen/dim_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Experiment Setup"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/dim_20sp"/>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/expDate"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/odd_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    android:singleLine="true"
+                     android:textColor="@color/ColorBlackLight" />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout21"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Exp Name:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/expName"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Exp Start Time:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/expTime"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/odd_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Exp Length:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/expLength"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Vape Time:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vapeTime"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/odd_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="# Hits/Cycle:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/expCycle"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Wait Time:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/waitTime"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/odd_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Drug Type:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/drugType"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Drug Calc:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/drugCalc"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/odd_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Watts:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/watts"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/temprature"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/odd_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Drug Concentration (mg/ml):"
+                    android:padding="7dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/drugConcetration"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:nextFocusDown="@id/lungs"
+
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/lungs"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle2"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Run Experiment"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/dim_20sp"/>
+            <LinearLayout
+                android:id="@+id/linearLayout12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="# of mL that remain in the lungs:"
+                    android:padding="8dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lungs"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:hint=""
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:nextFocusForward="@+id/expEndTime"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-9dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Note Exp End Time:"
+                    android:padding="7dp"
+                    android:layout_gravity="left"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorGreen"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/expEndTime"
+                    android:paddingBottom="@dimen/dim_5dp"
+                    android:paddingTop="@dimen/dim_5dp"
+                    android:paddingLeft="@dimen/dim_10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:background="@drawable/even_experimentsetup_edittext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:singleLine="true"
+                    android:textColor="@color/ColorBlackLight" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/parentLinear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/linearLayout98"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_10dp"
+
+                android:orientation="horizontal" >
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvGroupId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreen"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:padding="8dp"
+                    android:layout_weight=".9"
+                    android:text="Group"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvNarscan"
+                    android:layout_width="0dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGreen"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:layout_weight="1.1"
+                    android:text="Narscan effect after hits"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSubjectPasswed"
+                    android:layout_width="0dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_18sp"
+                    android:background="@color/colorGreen"
+                    android:textColor="@color/colorWhite"
+                    android:text="Subject passed after hits"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

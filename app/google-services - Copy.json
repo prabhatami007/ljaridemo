@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "537994343826",
+    "firebase_url": "https://myapp-1e968.firebaseio.com",
+    "project_id": "myapp-1e968",
+    "storage_bucket": "myapp-1e968.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537994343826:android:8b6c9acc142ba0fe853d4b",
+        "android_client_info": {
+          "package_name": "com.vision2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537994343826-o2n1cancqqhjfm4v5h7evklav6ctbtbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO39Gq0J3pNcWV1p_7xrDbJVTRAq0goRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537994343826-o2n1cancqqhjfm4v5h7evklav6ctbtbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

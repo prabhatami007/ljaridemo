@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/navigation_face">
+
+    <fragment
+        android:id="@+id/navigation_face"
+        android:name="com.vision2020.ui.faceDetection.FaceReconFragment"
+        android:label="@string/face_recognition"
+        tools:layout="@layout/fragment_face" >
+        <action
+            android:id="@+id/action_navigation_face_to_effectsOnFaceFragment"
+            app:destination="@id/effectsOnFaceFragment" />
+    </fragment>
+    <!--android:label="@string/title_home"-->
+    <fragment
+        android:id="@+id/navigation_result"
+        android:name="com.vision2020.ui.result.ExperimentResultFragment"
+        android:label="@string/experiment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_navigation_result_to_experimentResultStep2"
+            app:destination="@id/experimentResultStep2" />
+        <action
+            android:id="@+id/action_navigation_result_to_expResultWeeklyFragment"
+            app:destination="@id/expResultWeeklyFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_distress"
+        android:name="com.vision2020.ui.distress.DistressScenarioFragment"
+        android:label="@string/distress_scenario"
+        tools:layout="@layout/fragment_distress_scenario" >
+        <action
+            android:id="@+id/action_navigation_distress_to_distressExperimentSetupFragment"
+            app:destination="@id/distressExperimentSetupFragment" />
+        <action
+            android:id="@+id/action_navigation_distress_to_distressScenarioStep3"
+            app:destination="@id/distressScenarioStep3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_nida"
+        android:name="com.vision2020.ui.nida.NidaCurriculumFragment"
+        android:label="@string/nida_cur"
+        tools:layout="@layout/fragment_nida_curriculum" />
+
+    <fragment android:id="@+id/navigation_setting"
+        android:name="com.vision2020.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_navigation_setting_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_navigation_setting_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.vision2020.ui.settings.group.CreateGroupFragment"
+        android:label="@string/group_experiment"
+        tools:layout="@layout/fragment_create_group" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_addGroupFragment"
+            app:destination="@id/addGroupFragment" />
+        <action
+            android:id="@+id/action_createGroupFragment_to_groupMembersFragment"
+            app:destination="@id/groupMembersFragment" />
+        <action
+            android:id="@+id/action_createGroupFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+        <argument
+            android:name="groupId"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGroupFragment"
+        android:name="com.vision2020.ui.settings.group.AddGroupFragment"
+        android:label="@string/add_to_group"
+        tools:layout="@layout/fragment_add_group" />
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.vision2020.ui.settings.group.AddStudentFragment"
+        android:label="Group Experiment"
+        tools:layout="@layout/fragment_add_student">
+        <argument
+            android:name="group"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupMembersFragment"
+        android:name="com.vision2020.ui.settings.group.GroupMembersFragment"
+        android:label="Group Experiment"
+        tools:layout="@layout/fragment_group_members">
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_groupMembersFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/effectsOnFaceFragment"
+        android:name="com.vision2020.ui.faceDetection.EffectsOnFaceFragment"
+        android:label="@string/effects_on_face"
+        tools:layout="@layout/fragment_effects_on_face" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.vision2020.ui.teacher.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/distressExperimentSetupFragment"
+        android:name="com.vision2020.ui.distress.DistressExperimentSetupFragment"
+        android:label="Replay a Distress Scenario"
+        tools:layout="@layout/fragment_distress_experiment_setup" >
+
+        <action
+            android:id="@+id/action_distressExperimentSetupFragment_to_distressScenarioStep3"
+            app:destination="@id/distressScenarioStep3" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/distressScenarioStep3"
+        android:name="com.vision2020.ui.distress.DistressScenarioStep3"
+        android:label="Replay a Distress Scenario" >
+        <action
+            android:id="@+id/action_distressScenarioStep3_to_navigation_distress"
+            app:destination="@id/navigation_distress" />
+        <action
+            android:id="@+id/action_distressScenarioStep3_to_distressFinalFragment"
+            app:destination="@id/distressFinalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/distressFinalFragment"
+        android:name="com.vision2020.ui.distress.DistressFinalFragment"
+        android:label="Replay a Distress Scenario" >
+        <action
+            android:id="@+id/action_distressFinalFragment_to_navigation_distress"
+            app:destination="@id/navigation_distress" />
+    </fragment>
+    <fragment
+        android:id="@+id/experimentResultStep2"
+        android:name="com.vision2020.ui.result.ExperimentResultStep2"
+        android:label="@string/experiment_result"
+        tools:layout="@layout/fragment_experiment_result_step2" >
+        <action
+            android:id="@+id/action_experimentResultStep2_to_calculatedResultFragment"
+            app:destination="@id/calculatedResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculatedResultFragment"
+        android:name="com.vision2020.ui.result.CalculatedResultFragment"
+        android:label="@string/experiment_result"
+        tools:layout="@layout/fragment_calculated_result" >
+        <action
+            android:id="@+id/action_calculatedResultFragment_to_expResultWeeklyFragment"
+            app:destination="@id/expResultWeeklyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expResultWeeklyFragment"
+        android:name="com.vision2020.ui.result.ExpResultWeeklyFragment"
+        android:label="@string/experiment_result"
+        tools:layout="@layout/fragment_exp_result_weekly" />
+
+
+</navigation>

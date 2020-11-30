@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.result.CalculatedResultFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <LinearLayout
+        android:id="@+id/layoutForTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dim_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout02"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CALCULATED RESULT"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/dim_20sp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout031"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/sWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected Week : -"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_8sdp"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+
+           <Spinner
+               android:id="@+id/datelist"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:fontFamily="@font/lato_regular"
+               android:textSize="@dimen/dim_18sp"
+               android:padding="8dp"
+               android:maxLines="1"
+               android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+               android:layout_weight="0.7"
+               android:text="Select Date"
+               />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutForTeacher1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:orientation="vertical"
+
+            >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="Verify Exp Length:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/odd_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="# of Cycles:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/even_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="Total # of Hits:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/odd_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="Total Vape Juice Dispensed:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/even_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="Drug Concentration in Mixture:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/odd_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="# of mg of Drug Dispensed:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/even_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="# of mg of Drug Remaining in Lungs:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/odd_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="# of mL Dispersed into Rest of Body:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/even_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="wrap_content"
+                android:text="# of mg of Drug Dispersed into Rest of Body:"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="@dimen/dim_40dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorGreen"/>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:padding="8dp"
+                android:gravity="left"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="18dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/even_experimentsetup_edittext"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout05"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnWeekResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/dim_10dp"
+                    android:text="Weekly Results"
+                    android:fontFamily="@font/lato_bold"
+                    app:backgroundTint="@color/colorGreen"
+                    android:background="@drawable/rounded_button_global"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_18sp"/>
+
+
+            </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

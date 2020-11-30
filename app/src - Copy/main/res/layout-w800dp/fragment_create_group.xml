@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.group.CreateGroupFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:paddingStart="@dimen/dim_30dp"
+        android:paddingEnd="@dimen/dim_30dp"
+        android:paddingBottom="@dimen/dim_30dp"
+        android:paddingTop="@dimen/dim_20dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/crate_new_group"
+            android:textSize="@dimen/dim_20sp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutCreateGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_70dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:background="@drawable/style_with_top_boder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextGroupName"
+                    android:layout_width="@dimen/dim_300dp"
+                    android:layout_height="@dimen/dim_40dp"
+                    android:hint="@string/group_name"
+                    android:paddingStart="@dimen/dim_10dp"
+                    android:paddingEnd="@dimen/dim_10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="@dimen/dim_20sp"
+                    android:layout_marginStart="@dimen/dim_20dp"
+                    android:background="@drawable/rounded_border_edittext"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="text"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim_60dp"
+                android:text="@string/create_group"
+                android:textAllCaps="false"
+                android:textSize="@dimen/dim_20sp"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="@dimen/dim_20dp"
+                android:layout_gravity="center_vertical"
+                app:backgroundTint="@color/colorGroupGreen"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtGroupListing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/group_listing"
+            android:textSize="@dimen/dim_20sp"
+            android:layout_marginTop="@dimen/dim_5dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCreateGroup" />
+
+        <LinearLayout
+            android:id="@+id/groupListingHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/dim_5dp"
+            android:background="@color/colorGroupGreen"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGroupListing">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="@dimen/dim_20sp"
+                android:layout_marginStart="@dimen/dim_20dp"
+                android:text="@string/group_id" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                style="@style/ListingTextView"
+                android:text="@string/group_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/leader_name"
+                android:layout_gravity="center"
+                style="@style/ListingTextView"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                style="@style/ListingTextView"
+                android:text="@string/experiment_status" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                style="@style/ListingTextView"
+                android:text="@string/action" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGroupListing"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groupListingHeader"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_listing"
+             android:fontFamily="@font/lato_bold"
+             android:textColor="@color/colorBlack"
+             android:textSize="@dimen/dim_20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAddToGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnAddToGroup" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddToGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_to_group"
+            android:textSize="@dimen/dim_18sp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/lato_regular"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvGroupListing" />
+
+        <LinearLayout
+            android:id="@+id/StudentListingHeader"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/colorGreen"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddToGroup">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ListingTextView"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dim_20dp"
+                android:text="@string/select_all" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:buttonTint="@color/colorWhite"
+                android:layout_gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                style="@style/ListingTextView"
+                android:layout_gravity="center"
+                android:text="@string/name" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                style="@style/ListingTextView"
+                android:layout_gravity="center"
+                android:text="@string/status" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStudentListing"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StudentListingHeader" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

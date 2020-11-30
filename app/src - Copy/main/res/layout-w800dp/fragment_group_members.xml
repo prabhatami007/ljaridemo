@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/dim_30dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtGroupMembers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/group_members"
+            android:textColor="@color/ColorBlackLight"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="@dimen/dim_20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAddStudent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnAddStudent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_student"
+            android:layout_marginEnd="@dimen/dim_20dp"
+            android:padding="@dimen/dim_10dp"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="@dimen/dim_18sp"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/colorGroupGreen"
+            app:layout_constraintEnd_toStartOf="@+id/btnDeleteGroup"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cornerRadius="@dimen/dim_5dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_group"
+            android:textAllCaps="false"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="@dimen/dim_18sp"
+            app:backgroundTint="@color/colorGroupDelete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/dim_10dp"
+            app:cornerRadius="@dimen/dim_5dp">
+        </com.google.android.material.button.MaterialButton>
+
+        <LinearLayout
+            android:id="@+id/ListingHeader"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/colorGreen"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dim_30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnDeleteGroup">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ListingTextView"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/dim_20dp"
+                android:text="@string/select_all" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorWhite"
+                android:layout_gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".8"
+                style="@style/ListingTextView"
+                android:layout_gravity="center"
+                android:text="@string/name" />
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                style="@style/ListingTextView"
+                android:layout_gravity="center"
+                android:text="@string/status" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                style="@style/ListingTextView"
+                android:layout_gravity="center"
+                android:text="@string/action" />
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvViewGroupMembers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ListingHeader" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
